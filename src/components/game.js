@@ -6,7 +6,7 @@ import StatusSection from './status-section';
 import InfoSection from './info-section';
 
 import {connect} from 'react-redux';
-import {seeInfo, restartGame, makeGuess} from '../actions';
+import {seeInfo, seeFeedback, restartGame, makeGuess} from '../actions';
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -103,4 +103,21 @@ export default class Game extends React.Component {
       </div>
     );
   }
-}
+
+  game.defaultProps = {
+    restart: false,
+    guess: 10,
+    feedback: false,
+    info: false
+  };
+
+  export const mapStateToProps = state => ({
+      principal: state.principal,
+      interest: state.interest,
+      years: state.years,
+      total: state.principal * Math.pow(1 + state.interest / 100, state.years)
+  });
+
+  export default connect(mapStateToProps)(game);
+
+  }

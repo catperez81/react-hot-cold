@@ -3,7 +3,7 @@ import {RESTART_GAME, MAKE_GUESS, SEE_INFO, SEE_FEEDBACK} from '../actions';
 const initialState = {
 	restart: false,
     guess: 10,
-    info: false
+    feedback: false
 };
 
 
