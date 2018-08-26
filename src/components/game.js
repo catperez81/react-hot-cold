@@ -6,10 +6,9 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-import {connect} from 'react-redux';
 import {seeInfo, seeFeedback, restartGame, makeGuess} from '../actions';
 
-export default class Game extends React.Component {
+export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,7 +104,7 @@ export default class Game extends React.Component {
     );
   }}
 
-game.defaultProps = {
+Game.defaultProps = {
   restart: false,
   guess: 10,
   feedback: false,
@@ -119,5 +118,5 @@ export const mapStateToProps = state => ({
     info: state.info
 });
 
-export default connect(mapStateToProps)(game);
+export default connect(mapStateToProps)(Game);
 

@@ -1,4 +1,4 @@
-import {RESTART_GAME, MAKE_GUESS, SEE_INFO, SEE_FEEDBACK} from '../actions';
+import {RESTART_GAME, MAKE_GUESS, SEE_INFO, SEE_FEEDBACK} from './actions';
 
 const initialState = {
 	restart: false,
@@ -29,5 +29,4 @@ export const quizReducer = (state=initialState, action) => {
         });
     }
     return state;
-    }
 };
