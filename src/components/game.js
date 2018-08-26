@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Header from './header';
 import GuessSection from './guess-section';
@@ -102,22 +103,21 @@ export default class Game extends React.Component {
         </main>
       </div>
     );
-  }
+  }}
 
-  game.defaultProps = {
-    restart: false,
-    guess: 10,
-    feedback: false,
-    info: false
-  };
+game.defaultProps = {
+  restart: false,
+  guess: 10,
+  feedback: false,
+  info: false
+};
 
-  export const mapStateToProps = state => ({
-      restart: state.restart,
-      guess: state.guess,
-      feedback: state.feedback,
-      info: state.info
-  });
+export const mapStateToProps = state => ({
+    restart: state.restart,
+    guess: state.guess,
+    feedback: state.feedback,
+    info: state.info
+});
 
-  export default connect(mapStateToProps)(game);
+export default connect(mapStateToProps)(game);
 
-  }
