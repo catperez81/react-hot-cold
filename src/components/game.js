@@ -112,10 +112,10 @@ export default class Game extends React.Component {
   };
 
   export const mapStateToProps = state => ({
-      principal: state.principal,
-      interest: state.interest,
-      years: state.years,
-      total: state.principal * Math.pow(1 + state.interest / 100, state.years)
+      restart: state.restart,
+      guess: state.guess,
+      feedback: state.feedback,
+      info: state.info
   });
 
   export default connect(mapStateToProps)(game);
