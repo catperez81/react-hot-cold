@@ -11,6 +11,12 @@ export const makeGuess = guess => ({
 	guess
 });
 
+export const SEE_FEEDBACK = 'SEE_FEEDBACK';
+export const seeFeedback = feedback => ({
+	type: SEE_FEEDBACK,
+	guess
+});
+
 
 export const SEE_INFO = 'SEE_INFO';
 export const seeInfo = info => ({

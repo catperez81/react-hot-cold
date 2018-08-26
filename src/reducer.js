@@ -1,4 +1,4 @@
-import {RESTART_GAME, MAKE_GUESS, SEE_INFO} from '../actions';
+import {RESTART_GAME, MAKE_GUESS, SEE_INFO, SEE_FEEDBACK} from '../actions';
 
 const initialState = {
 	restart: false,
@@ -16,6 +16,11 @@ export const quizReducer = (state=initialState, action) => {
     else if (action.type === MAKE_GUESS) {
         return Object.assign({}, state, {
             guess: action.guess
+        });
+    }
+    else if (action.type === SEE_FEEDBACK) {
+        return Object.assign({}, state, {
+            feedback: action.feedback
         });
     }
     else if (action.type === SEE_INFO) {
