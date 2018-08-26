@@ -5,6 +5,9 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
+import {connect} from 'react-redux';
+import {seeInfo, restartGame, makeGuess} from '../actions';
+
 export default class Game extends React.Component {
   constructor(props) {
     super(props);
