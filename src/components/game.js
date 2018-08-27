@@ -6,7 +6,7 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-import {seeInfo, seeFeedback, restartGame, makeGuess} from '../actions';
+import {seeFeedback, makeGuess} from '../actions';
 
 export class Game extends React.Component {
   constructor(props) {
@@ -105,17 +105,13 @@ export class Game extends React.Component {
   }}
 
 Game.defaultProps = {
-  restart: false,
-  guess: 10,
-  feedback: false,
-  info: false
+  guess: [],
+  feedback: ''
 };
 
 export const mapStateToProps = state => ({
-    restart: state.restart,
     guess: state.guess,
-    feedback: state.feedback,
-    info: state.info
+    feedback: state.feedback
 });
 
 export default connect(mapStateToProps)(Game);

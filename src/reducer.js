@@ -6,7 +6,6 @@ const initialState = {
     feedback: false
 };
 
-
 export const quizReducer = (state=initialState, action) => {
 	if (action.type === RESTART_GAME) {
         return Object.assign({}, state, {
