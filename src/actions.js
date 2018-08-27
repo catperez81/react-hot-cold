@@ -11,15 +11,14 @@ export const makeGuess = guess => ({
 	guess
 });
 
-export const SEE_FEEDBACK = 'SEE_FEEDBACK';
-export const seeFeedback = feedback => ({
-	type: SEE_FEEDBACK,
-	feedback
+export const GENERATE_AURAL_UPDATE = 'GENERATE_AURAL_UPDATE';
+export const generalAuralUpdate = () => ({
+	type: GENERATE_AURAL_UPDATE
 });
 
 
-export const SEE_INFO = 'SEE_INFO';
-export const seeInfo = info => ({
-	type: SEE_INFO,
-	info
-});
+// export const SEE_INFO = 'SEE_INFO';
+// export const seeInfo = info => ({
+// 	type: SEE_INFO,
+// 	info
+// });
